@@ -5,6 +5,7 @@ import { Container } from "../global"
 
 const Footer = () => (
   <FooterWrapper id="footer">
+    
     <FooterColumnContainer>
       <FooterColumn>
         <span>Features</span>
@@ -23,20 +24,14 @@ const Footer = () => (
       <FooterColumn>
         <span>Company</span>
         <ul>
-          <li>About Us</li>
-          <li>Careers</li>
-        </ul>
-      </FooterColumn>
-      <FooterColumn>
-        <span>Social</span>
-        <ul>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
+          <li><a href="https://www.mulesoft.com/about">About Us</a></li>
+          <li><a href="https://www.mulesoft.com/careers">Careers</a></li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
+    
     <BrandContainer>
-      <Logo>Finance</Logo>
+      <Logo>MuleSoft</Logo>
     </BrandContainer>
   </FooterWrapper>
 )

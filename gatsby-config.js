@@ -3,10 +3,11 @@ require("dotenv").config({
 })
 
 module.exports = {
+  pathPrefix: "/public",
   siteMetadata: {
-    title: `Gatsby Starter SaaS Marketing`,
-    description: `A simple one page marketing starter for saas companies.`,
-    author: `Keegan Burkett`,
+    title: `MuleSoft FHIR Server`,
+    description: `Easily create and deploy a Fast Healthcare Interoperability Resources (FHIR®) service for health data solutions.`,
+    author: `MuleSoft South SE Team`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

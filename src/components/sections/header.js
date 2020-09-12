@@ -8,7 +8,7 @@ import { Container } from "../global"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "fhir" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -27,24 +27,23 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+            <Subtitle>Accelerator for Healthcare</Subtitle>
             <h1>
-              All your money,
-              <br />
-              one account
+              MuleSoft FHIR Server
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+            Easily create and deploy a Fast Healthcare Interoperability Resources (FHIR®) service for health data solutions.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
+              <HeaderButton>Request Info</HeaderButton>
             </HeaderForm>
+            {/*
             <FormSubtitle>
               Already have a beta account?{" "}
               <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
             </FormSubtitle>
+            */}
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
@@ -120,7 +119,7 @@ const HeaderForm = styled.form`
     flex-direction: column;
   }
 `
-
+{/*
 const FormSubtitle = styled.span`
   ${props => props.theme.font_size.xxsmall}
 `
@@ -132,6 +131,7 @@ const FormSubtitleLink = styled(Link)`
   text-decoration: none;
   border-bottom: 1px solid ${props => props.theme.color.secondary};
 `
+*/}
 
 const HeaderInput = styled.input`
   font-weight: 500;
