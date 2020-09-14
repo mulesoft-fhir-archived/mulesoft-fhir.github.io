@@ -23,7 +23,7 @@ const Header = () => {
   }
 
   return (
-    <HeaderWrapper id="top">
+    <HeaderWrapper id="home">
       <Container>
         <Flex>
           <HeaderTextGroup>
@@ -34,11 +34,15 @@ const Header = () => {
             <h2>
             Easily create and deploy a Fast Healthcare Interoperability Resources (FHIR®) service for health data solutions.
             </h2>
+            <br/>
+            <TryItButton href="https://github.com/mulesoft-fhir">Go to Projects</TryItButton>
+            {/*
+            
             <HeaderForm onSubmit={handleSubmit}>
               <HeaderInput placeholder="Your email" />
               <HeaderButton>Request Info</HeaderButton>
             </HeaderForm>
-            {/*
+            
             <FormSubtitle>
               Already have a beta account?{" "}
               <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
@@ -204,5 +208,34 @@ const StyledImage = styled(Img)`
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 300px;
     display: none;
+  }
+`
+
+const TryItButton = styled.a`
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 1px;
+  height: 60px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background: ${props => props.theme.color.secondary};
+  border-radius: 4px;
+  padding: 23px 40px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  outline: 0px;
+  &:hover {
+    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin-left: 0;
   }
 `

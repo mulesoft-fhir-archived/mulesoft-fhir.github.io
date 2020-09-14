@@ -4,10 +4,10 @@ import styled from "styled-components"
 import { Container, Section } from "../global"
 
 const GetStarted = () => (
-  <StyledSection>
+  <StyledSection id="projects">
     <GetStartedContainer>
       <GetStartedTitle>Enable remote patient monitoring and telehealth</GetStartedTitle>
-      <TryItButton>Project</TryItButton>
+      <TryItButton href="https://github.com/mulesoft-fhir">Go to Projects</TryItButton>
       <Subtitle></Subtitle>
     </GetStartedContainer>
   </StyledSection>
@@ -33,7 +33,7 @@ const GetStartedTitle = styled.h3`
   text-align: center;
 `
 
-const TryItButton = styled.button`
+const TryItButton = styled.a`
   font-weight: 500;
   font-size: 14px;
   color: white;
@@ -42,11 +42,12 @@ const TryItButton = styled.button`
   display: block;
   margin-left: 8px;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
   background: ${props => props.theme.color.secondary};
   border-radius: 4px;
-  padding: 0px 40px;
+  padding: 23px 40px;
   border-width: 0px;
   border-style: initial;
   border-color: initial;

@@ -12,10 +12,10 @@ import {
   NavListWrapper,
   MobileMenu,
   Mobile,
-  //ActionsContainer,
+  ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["Project","Features", "", "", ""]
+const NAV_ITEMS = ["Home","Features","Projects"]
 
 export default class Navigation extends Component {
   state = {
@@ -54,7 +54,7 @@ export default class Navigation extends Component {
   )
 
   getNavList = ({ mobile = false }) => (
-    <NavListWrapper mobile={mobile}>
+    <NavListWrapper mobile={mobile}>      
       <Scrollspy
         items={NAV_ITEMS.map(item => item.toLowerCase())}
         currentClassName="active"
@@ -76,7 +76,7 @@ export default class Navigation extends Component {
         <StyledContainer>
           <Brand>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
-              <AnchorLink href="#top" onClick={this.closeMobileMenu}>
+              <AnchorLink href="#home" onClick={this.closeMobileMenu}>
                 MuleSoft
               </AnchorLink>
             </Scrollspy>
@@ -93,9 +93,8 @@ export default class Navigation extends Component {
               )}
             </button>
           </Mobile>
-
-          <Mobile hide>{this.getNavList({})}</Mobile>
-          {/*
+          <Mobile hide>{this.getNavList({})}</Mobile>  
+          {/*        
           <ActionsContainer>
             <button>Sign up</button>
           </ActionsContainer>

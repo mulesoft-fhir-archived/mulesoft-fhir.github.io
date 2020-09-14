@@ -3,7 +3,7 @@ require("dotenv").config({
 })
 
 module.exports = {
-  pathPrefix: "/public",
+  pathPrefix: "/",
   siteMetadata: {
     title: `MuleSoft FHIR Server`,
     description: `Easily create and deploy a Fast Healthcare Interoperability Resources (FHIR®) service for health data solutions.`,
